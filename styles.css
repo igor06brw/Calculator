@@ -26,6 +26,10 @@ body{
     background: #eee;
     border-radius: 40px;
     text-align: center;
+    color: #333;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
 }
 .calculator--keys {
     display: flex;
@@ -33,6 +37,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
+    font-size: 24px;
 }
 .calculator--key {
     background-color: #CCC;
@@ -43,4 +48,14 @@ body{
     flex-basis: 20%;
     text-align: center;
     color: #333;
+    height: 50px;
+    width: 0.1em;
+}
+.equal {
+    display: flex;
+    align-self: center;
+    background: #4FF1AA;
+}
+.is-pressed {
+    background-color: #888;
 }
