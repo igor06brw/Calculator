@@ -1,26 +1,29 @@
-const main = document.querySelector('.main');
 const calculator = document.querySelector('.calculator--keys');
 const display = document.querySelector('.display--box');
 
 calculator.addEventListener('click', e => {
-    if(!e.target.classList.contains('calculator--key')){
-        return 0;
-
-    } else {
-        const keyContent = e.target.textContent;
-        const displayKey = display.textContent;
-        if (displayKey === 0) {
-            console.log(keyContent);
-        } else {
-            display.textContent = displayKey + keyContent;
+    if(e.target.classList.contains('calculator--key')){
+        if (e.target.classList.contains('num')) {
+           console.log('number key!') 
         }
         if (e.target.classList.contains('decimal')) {
-            display.textContent = displayKey + '.';
+            console.log('decimal key!')
         }
-        if (e.target.classList.contains('calculator--key')) {
-            const keys = e.target
+        if (e.target.classList.contains('add') ||
+            e.target.classList.contains('subtract') ||
+            e.target.classList.contains('divide') ||
+            e.target.classList.contains('multiply')
+            ) {
+                console.log('operator key!')
         }
-         
+        if (e.target.classList.contains('equal')) {
+            console.log('equal key!')
+        }
+        if (e.target.classList.contains('clear')) {
+            console.log('clear key!')
+        } 
+        if (e.target.classList.contains('back')) {
+            console.log('back key!')
+        }     
     }
-
 });
